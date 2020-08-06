@@ -1,0 +1,19 @@
+sudo yum -y update
+sudo yum -y upgrade
+sudo yum -y groupinstall "Development Tools"
+sudo yum -y install blas --enablerepo=epel
+sudo yum -y install lapack --enablerepo=epel
+sudo yum -y install Cython --enablerepo=epel
+sudo yum install python27-devel python27-pip gcc
+virtualenv ~/env
+source ~/env/bin/activate
+pip install scipy
+pip install numpy
+pip install moviepy
+
+
+
+Copy to your locale machine all the content of the directories (except _markerlib, pip*, pkg_resources, setuptools* and easyinstall*) in a stack folder:
+
+home/ec2-user/env/lib/python2.7/dist-packages
+home/ec2-user/env/lib64/python2.7/dist-packages
